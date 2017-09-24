@@ -10,18 +10,10 @@ namespace BankApp
     {
         static void Main(string[] args)
         {
-            //Instantitate an object
-            var account = new Account();
-            //account.AccountNumber = 1234;
-            account.EmailAddress = "test@test.com";
-            account.AccountType = "Savings";
-            //account.Balance = 1000000000000000;
-
-            var newBalance = account.Deposit(100);
-
+            var account = Bank.CreateAccount("test@test.com", TypeOfAccount.Savings);
             Console.WriteLine($"AN: {account.AccountNumber}, EA: {account.EmailAddress}, Balance: {account.Balance:C}, AT: {account.AccountType}");
 
-            var account2 = new Account();
+            var account2 = Bank.CreateAccount("test2@test.com", initialDeposit:500);
             Console.WriteLine($"AN: {account2.AccountNumber}, EA: {account2.EmailAddress}, Balance: {account2.Balance:C}, AT: {account2.AccountType}");
 
         }
