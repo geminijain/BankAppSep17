@@ -8,6 +8,8 @@ namespace BankApp
 {
     public static class Bank
     {
+        private static List<Account> accounts = new List<Account>();
+
         /// <summary>
         /// Bank creates an account for the user
         /// </summary>
@@ -27,7 +29,13 @@ namespace BankApp
             {
                 account.Deposit(initialDeposit);
             }
+            accounts.Add(account);
             return account;
+        }
+
+        public static List<Account> GetAllAccounts()
+        {
+            return accounts;
         }
     }
 }

@@ -43,6 +43,7 @@ namespace BankApp
         public Account()
         {
             AccountNumber = ++lastAccountNumber;
+            CreatedDate = DateTime.UtcNow;
         }
 
         #endregion
