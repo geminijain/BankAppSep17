@@ -47,7 +47,9 @@ namespace BankApp
                     case "3":
                         break;
                     case "4":
-                        var accounts = Bank.GetAllAccounts();
+                        Console.Write("Email Address: ");
+                        emailAddress = Console.ReadLine();
+                        var accounts = Bank.GetAllAccounts(emailAddress);
                         foreach (var item in accounts)
                         {
                             Console.WriteLine($"AN: {item.AccountNumber}, AT: {item.AccountType}, Balance: {item.Balance:C}, Created Date: {item.CreatedDate}");

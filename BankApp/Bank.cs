@@ -8,7 +8,7 @@ namespace BankApp
 {
     public static class Bank
     {
-        private static List<Account> accounts = new List<Account>();
+        private static BankModel db = new BankModel();
 
         /// <summary>
         /// Bank creates an account for the user
@@ -29,13 +29,14 @@ namespace BankApp
             {
                 account.Deposit(initialDeposit);
             }
-            accounts.Add(account);
+            db.Accounts.Add(account);
+            db.SaveChanges();
             return account;
         }
 
-        public static List<Account> GetAllAccounts()
+        public static List<Account> GetAllAccounts(string emailAddress)
         {
-            return accounts;
+            return db.Accounts.Where(a => a.EmailAddress == emailAddress).ToList();
         }
     }
 }

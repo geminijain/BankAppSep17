@@ -12,3 +12,7 @@ G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.csprojResolveAssemblyReference.
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.csproj.CoreCompileInputs.cache
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.exe
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.pdb
+G:\Github\BankAppSep17\BankApp\bin\Debug\EntityFramework.dll
+G:\Github\BankAppSep17\BankApp\bin\Debug\EntityFramework.SqlServer.dll
+G:\Github\BankAppSep17\BankApp\bin\Debug\EntityFramework.xml
+G:\Github\BankAppSep17\BankApp\bin\Debug\EntityFramework.SqlServer.xml
