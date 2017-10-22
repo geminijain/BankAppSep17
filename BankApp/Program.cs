@@ -45,21 +45,47 @@ namespace BankApp
                         break;
                     case "2":
                         PrintAllAccounts();
-                        Console.Write("Account number: ");
-                        var accountNumber = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Amount to deposit: ");
-                        amount = Convert.ToDecimal(Console.ReadLine());
-                        Bank.Deposit(accountNumber, amount);
-                        Console.WriteLine("Deposit was successful!");
+                        try
+                        {
+                            Console.Write("Account number: ");
+                            var aNumber = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Amount to deposit: ");
+                            amount = Convert.ToDecimal(Console.ReadLine());
+                            Bank.Deposit(aNumber, amount);
+                            Console.WriteLine("Deposit was successful!");
+                        }
+                        catch(FormatException)
+                        {
+                            Console.WriteLine("Either the account number or amount is invalid");
+                        }
+                        catch(OverflowException)
+                        {
+                            Console.WriteLine("Either the account number or the amount is beyond the range.");
+                        }
+                        catch(ArgumentOutOfRangeException ax)
+                        {
+                            Console.WriteLine(ax.Message);
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Oops! Try again!");
+                        }
                         break;
                     case "3":
                         PrintAllAccounts();
-                        Console.Write("Account number: ");
-                        accountNumber = Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Amount to withdraw: ");
-                        amount = Convert.ToDecimal(Console.ReadLine());
-                        Bank.Withdraw(accountNumber, amount);
-                        Console.WriteLine("Withdrawl was successful!");
+                        try
+                        {
+                            Console.Write("Account number: ");
+                            var aNumber = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Amount to withdraw: ");
+                            amount = Convert.ToDecimal(Console.ReadLine());
+                            Bank.Withdraw(aNumber, amount);
+                            Console.WriteLine("Withdrawl was successful!");
+                        }
+                        catch (ArgumentOutOfRangeException ax)
+                        {
+                            Console.WriteLine(ax.Message);
+                        }
                         break;
                     case "4":
                         PrintAllAccounts();
@@ -67,7 +93,7 @@ namespace BankApp
                     case "5":
                         PrintAllAccounts();
                         Console.Write("Account number: ");
-                        accountNumber = Convert.ToInt32(Console.ReadLine());
+                        var accountNumber = Convert.ToInt32(Console.ReadLine());
                         var transactions = Bank.GetAllTransactions(accountNumber);
                         foreach (var tran in transactions)
                         {

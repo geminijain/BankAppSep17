@@ -5,12 +5,8 @@ G:\OneDrive - Kal Academy\Documents\Materials\CSharp\Sep17\BankApp\BankApp\obj\D
 G:\OneDrive - Kal Academy\Documents\Materials\CSharp\Sep17\BankApp\BankApp\obj\Debug\BankApp.csproj.CoreCompileInputs.cache
 G:\OneDrive - Kal Academy\Documents\Materials\CSharp\Sep17\BankApp\BankApp\obj\Debug\BankApp.exe
 G:\OneDrive - Kal Academy\Documents\Materials\CSharp\Sep17\BankApp\BankApp\obj\Debug\BankApp.pdb
-G:\Github\BankAppSep17\BankApp\bin\Debug\BankApp.exe.config
-G:\Github\BankAppSep17\BankApp\bin\Debug\BankApp.exe
 G:\Github\BankAppSep17\BankApp\bin\Debug\BankApp.pdb
-G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.csprojResolveAssemblyReference.cache
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.csproj.CoreCompileInputs.cache
-G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.exe
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.pdb
 G:\Github\BankAppSep17\BankApp\bin\Debug\EntityFramework.dll
 G:\Github\BankAppSep17\BankApp\bin\Debug\EntityFramework.SqlServer.dll
@@ -19,3 +15,6 @@ G:\Github\BankAppSep17\BankApp\bin\Debug\EntityFramework.SqlServer.xml
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.Migrations.InitialCreate.resources
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.csproj.GenerateResource.Cache
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.Migrations.Transactions.resources
+G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.dll
+G:\Github\BankAppSep17\BankApp\bin\Debug\BankApp.dll.config
+G:\Github\BankAppSep17\BankApp\bin\Debug\BankApp.dll
