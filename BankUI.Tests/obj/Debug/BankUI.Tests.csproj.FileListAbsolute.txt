@@ -98,3 +98,6 @@ G:\Github\BankAppSep17\BankUI.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xm
 G:\Github\BankAppSep17\BankUI.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 G:\Github\BankAppSep17\BankUI.Tests\obj\Debug\BankUI.Tests.dll
 G:\Github\BankAppSep17\BankUI.Tests\obj\Debug\BankUI.Tests.pdb
+G:\Github\BankAppSep17\BankUI.Tests\bin\Debug\BankApp.dll
+G:\Github\BankAppSep17\BankUI.Tests\bin\Debug\BankApp.pdb
+G:\Github\BankAppSep17\BankUI.Tests\bin\Debug\BankApp.dll.config

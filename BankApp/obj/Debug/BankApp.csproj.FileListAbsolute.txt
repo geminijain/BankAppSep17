@@ -18,3 +18,4 @@ G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.Migrations.Transactions.resourc
 G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.dll
 G:\Github\BankAppSep17\BankApp\bin\Debug\BankApp.dll.config
 G:\Github\BankAppSep17\BankApp\bin\Debug\BankApp.dll
+G:\Github\BankAppSep17\BankApp\obj\Debug\BankApp.csprojResolveAssemblyReference.cache
