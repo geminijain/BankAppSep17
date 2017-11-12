@@ -20,6 +20,7 @@ namespace BankUI.Controllers
         }
 
         // GET: Accounts/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,6 +36,7 @@ namespace BankUI.Controllers
         }
 
         // GET: Accounts/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -45,47 +47,47 @@ namespace BankUI.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "AccountNumber,EmailAddress,Balance,AccountType,CreatedDate")] Account account)
         {
-            if (ModelState.IsValid)
-            {
-                Bank.CreateAccount(account.EmailAddress, account.AccountType);
-                return RedirectToAction("Index");
-            }
-
-            return View(account);
+            account.EmailAddress = HttpContext.User.Identity.Name;
+            Bank.CreateAccount(account.EmailAddress, account.AccountType);
+            return RedirectToAction("Index");
         }
 
         // GET: Accounts/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Account account = Bank.GetAccountByAccountNumber(id.Value);
-            if (account == null)
+            try
             {
-                return HttpNotFound();
+                Account account = Bank.GetAccountByAccountNumber(id.Value);
+                return View(account);
             }
-            return View(account);
+            catch (InvalidAccountException ax)
+            {
+                Session["ErrorMessage"] = ax.Message;
+                throw;
+            }
         }
 
         // POST: Accounts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "AccountNumber,EmailAddress,Balance,AccountType,CreatedDate")] Account account)
         {
-            if (ModelState.IsValid)
-            {
-                Bank.EditAccount(account);
-                return RedirectToAction("Index");
-            }
-            return View(account);
+            Bank.EditAccount(account);
+            return RedirectToAction("Index");
         }
 
+        [Authorize]
         public ActionResult Deposit(int? id)
         {
             if (id == null)
@@ -98,6 +100,7 @@ namespace BankUI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Deposit(FormCollection controls)
         {
             var accountNumber = Convert.ToInt32(controls["AccountNumber"]);
@@ -107,6 +110,7 @@ namespace BankUI.Controllers
 
         }
 
+        [Authorize]
         public ActionResult Withdraw(int? id)
         {
             if (id == null)
@@ -119,6 +123,7 @@ namespace BankUI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public ActionResult Withdraw(FormCollection controls)
         {
             var accountNumber = Convert.ToInt32(controls["AccountNumber"]);
@@ -128,6 +133,17 @@ namespace BankUI.Controllers
 
         }
 
+        [Authorize]
+        public ActionResult Transactions(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var transactions = Bank.GetAllTransactions(id.Value);
+            return View(transactions);
+        }
         protected override void Dispose(bool disposing)
         {
             base.Dispose(disposing);

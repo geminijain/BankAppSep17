@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace BankApp
 {
+    public class InvalidAccountException : Exception
+    {
+        public InvalidAccountException() : base("Invalid Account Number")
+        {
+
+        }
+    }
     public static class Bank
     {
         private static BankModel db = new BankModel();
@@ -102,7 +109,7 @@ namespace BankApp
         {
             var account = db.Accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
             if (account == null)
-                throw new ArgumentOutOfRangeException("Invalid account number.");
+                throw new InvalidAccountException();
             return account;
         }
 

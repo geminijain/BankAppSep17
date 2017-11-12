@@ -1,0 +1,14 @@
+G:\Github\BankAppSep17\BankApp\bin\Release\BankApp.dll.config
+G:\Github\BankAppSep17\BankApp\bin\Release\BankApp.dll
+G:\Github\BankAppSep17\BankApp\bin\Release\BankApp.pdb
+G:\Github\BankAppSep17\BankApp\bin\Release\EntityFramework.dll
+G:\Github\BankAppSep17\BankApp\bin\Release\EntityFramework.SqlServer.dll
+G:\Github\BankAppSep17\BankApp\bin\Release\EntityFramework.xml
+G:\Github\BankAppSep17\BankApp\bin\Release\EntityFramework.SqlServer.xml
+G:\Github\BankAppSep17\BankApp\obj\Release\BankApp.csprojResolveAssemblyReference.cache
+G:\Github\BankAppSep17\BankApp\obj\Release\BankApp.Migrations.InitialCreate.resources
+G:\Github\BankAppSep17\BankApp\obj\Release\BankApp.Migrations.Transactions.resources
+G:\Github\BankAppSep17\BankApp\obj\Release\BankApp.csproj.GenerateResource.Cache
+G:\Github\BankAppSep17\BankApp\obj\Release\BankApp.csproj.CoreCompileInputs.cache
+G:\Github\BankAppSep17\BankApp\obj\Release\BankApp.dll
+G:\Github\BankAppSep17\BankApp\obj\Release\BankApp.pdb
