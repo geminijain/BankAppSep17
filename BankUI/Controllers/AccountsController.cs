@@ -12,11 +12,14 @@ namespace BankUI.Controllers
 {
     public class AccountsController : Controller
     {
+        public string UserName { get; set; }
         // GET: Accounts
         [Authorize]
         public ActionResult Index()
         {
-            return View(Bank.GetAllAccounts(HttpContext.User.Identity.Name));
+            if (HttpContext != null && !string.IsNullOrEmpty(HttpContext.User.Identity.Name))
+                UserName = HttpContext.User.Identity.Name;
+            return View(Bank.GetAllAccounts(UserName));
         }
 
         // GET: Accounts/Details/5

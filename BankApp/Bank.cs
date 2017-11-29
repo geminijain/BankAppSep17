@@ -51,6 +51,8 @@ namespace BankApp
 
         public static List<Account> GetAllAccounts(string emailAddress)
         {
+            if (string.IsNullOrEmpty(emailAddress))
+                throw new NullReferenceException();
             return db.Accounts.Where(a => a.EmailAddress == emailAddress).ToList();
         }
 
